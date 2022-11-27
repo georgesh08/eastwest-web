@@ -1,7 +1,3 @@
-.html {
-    font-size: 62.5%;
-}
-
 body {
     font-family: "Evolventa", sans-serif;
 }
@@ -204,21 +200,19 @@ td {
     vertical-align: inherit;
 }
 
+
 table {
     margin-top: 5px;
     width: 100%;
     border-collapse: collapse;
     display: grid;
     text-align: center;
+    border-color: gray;
+    grid-template-columns: 40% 20% 20% 20%;
 }
 
-table {
-    display: table;
-    border-collapse: separate;
-    box-sizing: border-box;
-    text-indent: initial;
-    border-spacing: 2px;
-    border-color: grey;
+thead, tbody, tr {
+    display: contents;
 }
 
 @media (max-width: 858px) {
