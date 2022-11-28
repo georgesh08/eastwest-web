@@ -1,6 +1,13 @@
+
+@font-face {
+    font-family: "Evolventa";
+    src: url("../fonts/Evolventa-Regular.ttf");
+}
+
 body {
     font-family: "Evolventa", sans-serif;
 }
+
 
 .container {
     max-width: 1200px;
