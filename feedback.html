@@ -51,14 +51,19 @@
 
       <form class="testimonials-form">
         <h2>Нам важно знать Ваше мнение</h2>
-        <input id="name" type="text" placeholder="Имя" />
-        <textarea
-                id = "testimonial"
-                cols="30"
-                rows="4"
-                placeholder="Отзыв"
-        ></textarea>
-        <a href="#" class="btn btn-primary">Отправить</a>
+        <label>
+          <textarea required id="name" placeholder="Имя"></textarea>
+        </label>
+
+        <label>
+                    <textarea
+                            id = "testimonial"
+                            cols="30"
+                            rows="4"
+                            placeholder="Отзыв"
+                    ></textarea>
+        </label>
+        <button class="btn btn-primary" type='submit'>Отправить</button>
       </form>
     </div>
 
