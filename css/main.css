@@ -319,6 +319,12 @@ thead, tbody, tr {
     }
 }
 
+@media (max-width: 710px) {
+    .about-img {
+        display: none;
+    }
+}
+
 @media (max-width: 500px) {
     .navbar .menu-items li {
         font-size: 1.6rem;
