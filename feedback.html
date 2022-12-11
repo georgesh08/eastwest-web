@@ -10,6 +10,7 @@
   <script src="js/navbarStyling.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="js/loadingTime.js"></script>
+  <script src="js/feedback.js"></script>
   <title>Price</title>
 </head>
 <body>
@@ -48,18 +49,32 @@
         <img src="img/feedback.jpg" alt="" />
       </div>
 
-      <div class="form-container">
+      <form class="testimonials-form">
         <h2>Нам важно знать Ваше мнение</h2>
-        <input type="text" placeholder="Your Name" />
-        <input type="email" placeholder="E-Mail" />
+        <input id="name" type="text" placeholder="Имя" />
         <textarea
+                id = "testimonial"
                 cols="30"
-                rows="6"
-                placeholder="Type Your Message"
+                rows="4"
+                placeholder="Отзыв"
         ></textarea>
         <a href="#" class="btn btn-primary">Отправить</a>
-      </div>
+      </form>
     </div>
+
+    <div class="testimonials-container">
+      <template id="testimonial-template">
+        <div class="testimonial">
+          <p>Автор:
+            <span>${newComment["name"]}</span>
+          </p>
+          <p>Отзыв:
+            <span>${newComment["testimonial"]}</span>
+          </p>
+        </div>
+      </template>
+    </div>
+
   </section>
 </main>
 <footer id="footer" style="position: absolute; margin-top: 60%">

@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
 
 <head>
     <meta charset="utf-8" name="keywords" content="язык, клуб, обучение, спб">
@@ -12,6 +12,7 @@
     <link href="css/header.css" rel="stylesheet">
     <script src="js/loadingTime.js"></script>
     <script src="js/navbarStyling.js"></script>
+    <script src="js/feedback.js"></script>
 </head>
 
 <body>
@@ -162,18 +163,37 @@
                 <img src="img/feedback.jpg" alt="" />
             </div>
 
-            <div class="form-container">
+            <form class="testimonials-form">
                 <h2>Нам важно знать Ваше мнение</h2>
-                <input type="text" placeholder="Your Name" />
-                <input type="email" placeholder="E-Mail" />
-                <textarea
-                        cols="30"
-                        rows="6"
-                        placeholder="Type Your Message"
-                ></textarea>
-                <a href="#" class="btn btn-primary">Отправить</a>
-            </div>
+                <label>
+                    <textarea required id="name" placeholder="Имя"></textarea>
+                </label>
+
+                <label>
+                    <textarea
+                            id = "testimonial"
+                            cols="30"
+                            rows="4"
+                            placeholder="Отзыв"
+                    ></textarea>
+                </label>
+                <button class="btn btn-primary" type='submit'>Отправить</button>
+            </form>
         </div>
+
+        <div class="testimonials-container">
+            <template id="testimonial-template">
+                <div class="testimonial">
+                    <p>Автор:
+                        <span>${newComment["name"]}</span>
+                    </p>
+                    <p>Отзыв:
+                        <span>${newComment["testimonial"]}</span>
+                    </p>
+                </div>
+            </template>
+        </div>
+
     </section>
 
 </main>
