@@ -7,7 +7,7 @@ async function getData(){
     removeReviews();
     let postNumber = getRandomPost();
     let preLoader = document.getElementById('preloader');
-    preLoader.innerHTML += '<div class="preloader"></div>';
+    preLoader.innerHTML = '<div class="preloader"></div>';
     let response = await fetch(`https://jsonplaceholder.typicode.com/posts/${postNumber}/comments`);
     let result = await response.json();
     preLoader.innerHTML = '';
