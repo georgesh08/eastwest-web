@@ -1,13 +1,3 @@
-#feedback {
-    padding: 2rem 0;
-    background: rgb(245, 245, 247);
-}
-
-.posts-container {
-    display: flex;
-    background: #fff;
-}
-
 .post {
     border: 2px solid #ccc;
     background-color: #eee;
@@ -24,5 +14,24 @@
 @media (max-width: 500px) {
     .post {
         text-align: center;
+    }
+}
+
+.preloader {
+    height: 35px;
+    width: 35px;
+    border: 5px solid #bfbebb;
+    border-top: 5px solid #D74747FF;
+    border-radius: 50%;
+    margin-top: 5px;
+    animation: rotate 1s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }

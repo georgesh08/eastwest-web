@@ -6,32 +6,32 @@ function listenOnLoadCLick() {
 async function getData(){
     removeReviews();
     let postNumber = getRandomPost();
+    let preLoader = document.getElementById('preloader');
+    preLoader.innerHTML += '<div class="preloader"></div>';
     let response = await fetch(`https://jsonplaceholder.typicode.com/posts/${postNumber}/comments`);
-    let result = JSON.parse(await response.json());
-    for (let i = 0; i < result.left; i++){
-        let title = result[i].title;
-        let body = result[i].body;
-        console.log(title);
-        addPost(title, body);
-    }
+    let result = await response.json();
+    preLoader.innerHTML = '';
+    result.forEach(elem => {
+        const newPost = {"name": elem.name, "body": elem.body};
+        addPost(newPost);
+    })
 }
 
 function removeReviews(){
-    let container = document.getElementById('posts');
-    container.innerHTML = '';
+    // document.getElementById('posts-container').innerHTML = '';
 }
 
 function getRandomPost(){
     return Math.floor(Math.random() * (100) + 1);
 }
 
-function addPost(title, body){
+function addPost(newPost){
     let container = document.querySelector(".posts-container");
     let template = document.querySelector('#post-template');
     let clone = template.content.cloneNode(true);
     let sp = clone.querySelectorAll("span");
-    sp[0].textContent = title;
-    sp[1].textContent = body;
+    sp[0].textContent = newPost["name"];
+    sp[1].textContent = newPost["body"];
     container.appendChild(clone);
 }
 

@@ -7,10 +7,10 @@
   <link href="css/about.css" rel="stylesheet">
   <link href="css/feedback.css" rel="stylesheet">
   <link href="css/header.css" rel="stylesheet">
+  <link href="css/feed.css" rel="stylesheet">
   <script src="js/navbarStyling.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="js/loadingTime.js"></script>
-  <script src="js/feedback.js"></script>
+  <script src="js/dataLoader.js"></script>
   <title>Feed</title>
 </head>
 <body>
@@ -44,11 +44,12 @@
 </header>
 <main>
   <button id="loadButton" class="btn btn-primary" type='button' style="margin-top:75px;">Загрузить ленту</button>
-  <div class="posts-container">
+  <div id="preloader"></div>
+  <div class="posts-container" id="posts-container">
     <template id="post-template">
       <div class="post">
         <p>Название:
-          <span>${newPost["title"]}</span>
+          <span>${newPost["name"]}</span>
         </p>
         <p>Пост:
           <span>${newPost["body"]}</span>
