@@ -1,0 +1,28 @@
+#feedback {
+    padding: 2rem 0;
+    background: rgb(245, 245, 247);
+}
+
+.posts-container {
+    display: flex;
+    background: #fff;
+}
+
+.post {
+    border: 2px solid #ccc;
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px 0
+}
+
+.post span {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+@media (max-width: 500px) {
+    .post {
+        text-align: center;
+    }
+}
