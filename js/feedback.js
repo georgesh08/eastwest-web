@@ -14,7 +14,7 @@ function listenOnSubmitCLick() {
             return;
         }
         const id = userName + Math.random() + Date.now()
-        const newObject = {"name": userName, "testimonial": testimonial};
+        const newObject = {"name": userName, "testimonial": testimonial, "post-time": Date.now()};
         localStorage.setItem(id, JSON.stringify(newObject));
         addComment(newObject);
         clearFields();
@@ -28,7 +28,12 @@ function showComment() {
     while (n--) {
         arr.push(JSON.parse(localStorage.getItem(keys[keys.length - n - 1])));
     }
+    arr.sort(comparator)
     arr.forEach(addComment)
+}
+
+function comparator(item1, item2) {
+    return item1["post-time"] - item2["post-time"];
 }
 
 function addComment(newComment){
