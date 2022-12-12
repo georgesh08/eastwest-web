@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/about.css" rel="stylesheet">
+  <link href="css/feedback.css" rel="stylesheet">
+  <link href="css/header.css" rel="stylesheet">
+  <script src="js/navbarStyling.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/loadingTime.js"></script>
+  <script src="js/feedback.js"></script>
+  <title>Price</title>
+</head>
+<body>
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-container container">
+
+      <input type="checkbox">
+
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+
+      <ul class="navbar-menu">
+        <li class="node-menu-list-item"><a href="index.html" target="_self">Главная</a></li>
+        <li class="node-menu-list-item"><a href="about.html" target="_self">О проекте</a></li>
+        <li class="node-menu-list-item"><a href="gallery.html" target="_self">Галерея</a></li>
+        <li class="node-menu-list-item"><a href="price.html" target="_self">Прайс</a></li>
+        <li class="node-menu-list-item"><a href="feedback.html" target="_self">Отзывы</a></li>
+      </ul>
+
+      <a class="logo" href="index.html" target="_self">
+        <img src="img/colored-logo-no-background.svg" alt="East & West Club Logo"
+             loading="lazy">
+      </a>
+    </div>
+  </nav>
+</header>
+<main>
+  <section id="feedback" style="position: absolute; margin-top: 20px; width: 100%">
+    <h2 class="heading">Оставьте отзыв о нас</h2>
+    <div class="feedback-container container">
+      <div class="feedback-img">
+        <img src="img/feedback.jpg" alt="" />
+      </div>
+
+      <form class="testimonials-form">
+        <h2>Нам важно знать Ваше мнение</h2>
+        <label>
+          <textarea required id="name" placeholder="Имя"></textarea>
+        </label>
+
+        <label>
+                    <textarea
+                            id = "testimonial"
+                            cols="30"
+                            rows="4"
+                            placeholder="Отзыв"
+                    ></textarea>
+        </label>
+        <button class="btn btn-primary" type='submit'>Отправить</button>
+      </form>
+    </div>
+
+    <div class="testimonials-container">
+      <template id="testimonial-template">
+        <div class="testimonial">
+          <p>Автор:
+            <span>${newComment["name"]}</span>
+          </p>
+          <p>Отзыв:
+            <span>${newComment["testimonial"]}</span>
+          </p>
+        </div>
+      </template>
+    </div>
+
+  </section>
+</main>
+</body>
+</html>

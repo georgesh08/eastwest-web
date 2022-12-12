@@ -1,0 +1,73 @@
+.btn {
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.btn-primary {
+    color: #fff;
+    background: #124058;
+}
+
+.btn-primary:hover {
+    background: #0B2635;
+    transition: background 0.3s ease-in-out;
+}
+
+
+.showcase-area {
+    height: 50vh;
+}
+
+.showcase-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.2rem;
+}
+
+.main-title {
+    text-transform: uppercase;
+    margin-top: 3.5em;
+}
+
+#about {
+    padding: 30px 0;
+    background: #f5f5f7;
+    margin: 30px;
+}
+
+.about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+#about p {
+    color: #555;
+}
+
+#about .small-text {
+    font-size: 1.7rem;
+    color: #666;
+    font-weight: 600;
+}
+
+.about-info{
+    font-size: 1.2rem;
+}
+
+.about-img {
+    flex: 1 1 300px;
+    padding: 30px;
+    transform: translateX(150%);
+    animation: about-img-animation 1s ease-in-out forwards;
+}
