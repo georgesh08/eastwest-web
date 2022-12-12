@@ -9,7 +9,7 @@ function listenOnSubmitCLick() {
             return;
         }
 
-        if (!/^[a-zA-Z]+$/.test(userName)) {
+        if (/[0-9]/.test(userName)) {
             alert("В имени могут присутствовать только буквы!");
             return;
         }
