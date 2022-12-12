@@ -47,10 +47,8 @@ function addComment(newComment){
 }
 
 function clearFields(){
-    let field = document.querySelectorAll("label textarea")
-    field.forEach(elem => {
-        elem.value = '';
-    })
+    let field = document.querySelector("form")
+    field.reset();
 }
 
 (function () {
