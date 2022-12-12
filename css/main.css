@@ -1,6 +1,13 @@
+
+@font-face {
+    font-family: "Evolventa";
+    src: url("../fonts/Evolventa-Regular.ttf");
+}
+
 body {
     font-family: "Evolventa", sans-serif;
 }
+
 
 .container {
     max-width: 1200px;
@@ -75,7 +82,12 @@ body {
     text-decoration: none;
     color: #444;
     font-weight: 500;
-    transition: color 0.3s ease-in-out;
+    padding: 6px;
+}
+
+.clickedItem {
+    background-color: #C94843 !important;
+    color: #ffffff !important;
 }
 
 .navbar-menu a:hover {
