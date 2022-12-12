@@ -17,6 +17,7 @@ function listenOnSubmitCLick() {
         const newObject = {"name": userName, "testimonial": testimonial};
         localStorage.setItem(id, JSON.stringify(newObject));
         addComment(newObject);
+        clearFields();
     })
 }
 
@@ -38,6 +39,13 @@ function addComment(newComment){
     sp[0].textContent = newComment["name"];
     sp[1].textContent = newComment["testimonial"];
     container.appendChild(clone);
+}
+
+function clearFields(){
+    let field = document.querySelectorAll("label textarea")
+    field.forEach(elem => {
+        elem.value = '';
+    })
 }
 
 (function () {
