@@ -7,11 +7,11 @@
   <link href="css/about.css" rel="stylesheet">
   <link href="css/feedback.css" rel="stylesheet">
   <link href="css/header.css" rel="stylesheet">
+  <link href="css/feed.css" rel="stylesheet">
   <script src="js/navbarStyling.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="js/loadingTime.js"></script>
-  <script src="js/feedback.js"></script>
-  <title>Feedback</title>
+  <script src="js/dataLoader.js"></script>
+  <title>Feed</title>
 </head>
 <body>
 <header class="header">
@@ -43,45 +43,20 @@
   </nav>
 </header>
 <main>
-  <section id="feedback" style="position: absolute; margin-top: 20px; width: 100%">
-    <h2 class="heading">Оставьте отзыв о нас</h2>
-    <div class="feedback-container container">
-      <div class="feedback-img">
-        <img src="img/feedback.jpg" alt="" />
+  <button id="loadButton" class="btn btn-primary" type='button' style="margin-top:75px;">Загрузить ленту</button>
+  <div id="preloader"></div>
+  <div class="posts-container" id="posts-container">
+    <template id="post-template">
+      <div class="post">
+        <p>Название:
+          <span>${newPost["name"]}</span>
+        </p>
+        <p>Пост:
+          <span>${newPost["body"]}</span>
+        </p>
       </div>
-
-      <form class="testimonials-form">
-        <h2>Нам важно знать Ваше мнение</h2>
-        <label>
-          <textarea required id="name" placeholder="Имя"></textarea>
-        </label>
-
-        <label>
-                    <textarea
-                            id = "testimonial"
-                            cols="30"
-                            rows="4"
-                            placeholder="Отзыв"
-                    ></textarea>
-        </label>
-        <button class="btn btn-primary" type='submit'>Отправить</button>
-      </form>
-    </div>
-
-    <div class="testimonials-container">
-      <template id="testimonial-template">
-        <div class="testimonial">
-          <p>Автор:
-            <span>${newComment["name"]}</span>
-          </p>
-          <p>Отзыв:
-            <span>${newComment["testimonial"]}</span>
-          </p>
-        </div>
-      </template>
-    </div>
-
-  </section>
+    </template>
+  </div>
 </main>
 </body>
 </html>
